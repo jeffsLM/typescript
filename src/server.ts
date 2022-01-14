@@ -1,10 +1,9 @@
 import express from 'express';
+import { CreateCourse } from './routes';
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.json({message: 'hello'})
-})
+app.get("/", CreateCourse)
 
 
 app.listen(3333);
